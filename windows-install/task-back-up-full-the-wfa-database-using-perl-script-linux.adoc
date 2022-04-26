@@ -1,0 +1,44 @@
+---
+permalink: windows-install/task-back-up-full-the-wfa-database-using-perl-script-linux.html 
+sidebar: sidebar 
+keywords: oncommand workflow automation, backing up, wfa, database, cli 
+summary: OnCommand Workflow Automation （ WFA ）データベースのフルバックアップを実行するには、 WFA コマンドラインインターフェイス（ CLI ）を使用します。フルバックアップでは、 WFA データベース、 WFA 設定、およびキーがバックアップされます。 
+---
+= CLI を使用して WFA データベースをバックアップ（フル）します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation （ WFA ）データベースのフルバックアップを実行するには、 WFA コマンドラインインターフェイス（ CLI ）を使用します。フルバックアップでは、 WFA データベース、 WFA 設定、およびキーがバックアップされます。
+
+管理者ユーザクレデンシャルまたは ARCHITECT クレデンシャルが必要です。
+
+ハイアベイラビリティ環境では、 REST API を使用してスケジュールされたバックアップを作成する必要があります。WFA がフェイルオーバーモードの場合、 CLI を使用してバックアップを作成することはできません。
+
+詳細については、 REST のドキュメントを参照してください。
+
+.手順
+. シェルプロンプトで、 WFA サーバの次のディレクトリに移動します。
++
+wfa_install_location WFA\bin
+
++
+「 wfa_install_location 」は WFA のインストールディレクトリです。
+
+. WFA データベースをバックアップします。
++
+`..\wfa --backup -- user[--password=pass][--location=path][--full]'
+
++
+** _user_は 、バックアップユーザのユーザ名です。
+** _password_ はバックアップユーザのパスワードです。
++
+パスワードを指定していない場合は、プロンプトが表示されたらパスワードを入力する必要があります。
+
+** _path _ は、バックアップファイルへの完全なディレクトリパスです。
+
+
+. * オプション： * 指定した場所にバックアップファイルが作成されたことを確認します。
+

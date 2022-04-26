@@ -1,0 +1,21 @@
+---
+permalink: windows-install/task-create-a-support-case-for-wfa.html 
+sidebar: sidebar 
+keywords: create, support, case, oncommand, workflow automation 
+summary: テクニカルサポートの支援が必要な OnCommand Workflow Automation （ WFA ）の問題に対するサポートケースを作成できます。テクニカルトリアージテンプレートを使用してサポートケースを作成する必要があります。 
+---
+= OnCommand Workflow Automation のサポートケースを作成します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+テクニカルサポートの支援が必要な OnCommand Workflow Automation （ WFA ）の問題に対するサポートケースを作成できます。テクニカルトリアージテンプレートを使用してサポートケースを作成する必要があります。
+
+WFA のテクニカルトリアージテンプレートでは、サポートケースの作成に必要なすべての情報を提供します。テクニカルトリアージテンプレートで質問や情報を使用して問題 を構築する必要があります。これにより、ケースを解決するまでの時間を短縮できます。
+
+.手順
+. WFA のテクニカルトリアージテンプレートにアクセス
+. テンプレートを使用してケースを作成し、テクニカルサポートに送信します。
+

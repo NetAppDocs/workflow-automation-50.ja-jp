@@ -1,0 +1,14 @@
+---
+permalink: windows-install/concept-upgrading-third-party-products-in-windows.html 
+sidebar: sidebar 
+keywords: oncommand workflow automation, upgrade, third-party, products 
+summary: Windows では、 JRE 、 MySQL 、 ActiveState Perl などの OnCommand Workflow Automation （ WFA ）上のサードパーティ製品をアップグレードできます。JRE 、 MySQL などのサードパーティ製品は、セキュリティの脆弱性を報告します。このリリースの WFA から、サードパーティ製品を独自にアップグレードできるようになりました。 
+---
+= サードパーティ製品のアップグレード
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Windows では、 JRE 、 MySQL 、 ActiveState Perl などの OnCommand Workflow Automation （ WFA ）上のサードパーティ製品をアップグレードできます。JRE 、 MySQL などのサードパーティ製品は、セキュリティの脆弱性を報告します。このリリースの WFA から、サードパーティ製品を独自にアップグレードできるようになりました。

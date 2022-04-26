@@ -1,0 +1,43 @@
+---
+permalink: windows-install/task-upgrade-jre-on-windows-wfa.html 
+sidebar: sidebar 
+keywords: oncommand workflow automation, upgrade, jre 
+summary: Windows サーバで、新しいバージョンの Java Runtime Environment （ JRE ）を OnCommand Workflow Automation （ WFA ）にアップグレードできます。JRE を新しいバージョンにアップグレードすると、 Windows サーバのセキュリティの脆弱性に対する修正を入手できます。 
+---
+= JRE をアップグレードします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Windows サーバで、新しいバージョンの Java Runtime Environment （ JRE ）を OnCommand Workflow Automation （ WFA ）にアップグレードできます。JRE を新しいバージョンにアップグレードすると、 Windows サーバのセキュリティの脆弱性に対する修正を入手できます。
+
+WFA サーバに対する Windows の admin 権限が必要です。
+
+リリースファミリー内の JRE リリースを更新できます。たとえば、 Java 8 Update 144 （ 64 ビット）から Java 8 Update 151 （ 64 ビット）へのアップグレードは可能ですが、 Java 8 から Java 9 への直接更新はできません。
+
+.手順
+. WFA ホストマシンに admin ユーザとしてログインします。
+. Oracle のサイトから最新バージョンの Java 8 64 ビットをダウンロードして、ターゲットシステムにインストールします。
+. Windows サービスコンソールを使用して、次の WFA サービスを停止します。
++
+** NetApp WFA データベースまたは MYSQL57
+** NetApp WFA サーバ
+
+
+. WFA レジストリ内の最新バージョンの JRE を更新するには、「 <installdir>\WFA\bin\` path 」から「 updateWFARegistry.vbs 」をクリックします。
++
+* 例 *
+
++
+[listing]
+----
+C:\Program Files\NetApp\WFA\bin>cscript.exe
+updateWFARegistry.vbs
+Microsoft (R) Windows Script Host Version 5.8
+Copyright (C) Microsoft Corporation. All rights reserved
+C:\Program Files\NetApp\WFA\bin>
+----
+. Windows サービスコンソールを使用して WFA サービスを開始します。
+

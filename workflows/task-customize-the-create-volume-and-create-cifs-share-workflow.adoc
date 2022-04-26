@@ -1,0 +1,44 @@
+---
+permalink: workflows/task-customize-the-create-volume-and-create-cifs-share-workflow.html 
+sidebar: sidebar 
+keywords: customize, create, volume, cifs, share, workflow 
+summary: 要件に応じてワークフローをカスタマイズできます。たとえば、事前定義されたボリューム作成ワークフローと CIFS 共有ワークフローを変更して、重複排除と圧縮を含めることができます。 
+---
+= ボリュームの作成ワークフローと CIFS 共有ワークフローをカスタマイズします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要件に応じてワークフローをカスタマイズできます。たとえば、事前定義されたボリュームの作成ワークフローと CIFS 共有ワークフローを変更して、重複排除と圧縮を含めることができます。
+
+このタスクのカスタマイズと図は一例です。要件に基づいて WFA ワークフローを変更できます。
+
+.手順
+. [*Designer*>*Workflows] をクリックします。
+. Create a Volume and a CIFS Share * （ボリュームと CIFS 共有の作成）ワークフローを選択し、をクリックします image:../media/clone_wfa_icon.gif["クローンアイコン"] をクリックします。
++
+image::../media/modify_workflow_clone.gif[ワークフロークローンを変更します]
+
+. [ * 詳細 * ] タブをクリックし、 [ * ワークフロー名 * ] フィールドでワークフローの概要 を編集します。
+. [* ワークフロー *] タブをクリックし、 [* ストレージ * スキーマ ] を展開し、 * ボリュームの作成 * コマンドと * CIFS 共有の作成 * コマンドの間に * セットアップ重複排除と圧縮 * コマンドをドラッグ・アンド・ドロップします。
++
+image::../media/modify_workflow_add_command.gif[ワークフロー追加コマンドの変更]
+
+. 1 行目の * Setup deduplicなくなり compression* コマンドの下にマウスカーソルを置き、をクリックします image:../media/add_object_wfa_icon.gif[""]。
+. 「セットアップ重複排除と圧縮のパラメータ」 * ダイアログボックスの * ボリューム * タブで、以前に定義したボリューム * オプションを使用して * を選択し、 * ボリュームの定義 * フィールドで * share_volume * オプションを選択します。これは、ワークフローで * Create Volume * コマンドで作成されるボリュームオブジェクト変数です。
+. [ その他のパラメータ *] タブをクリックして、次の手順を実行します。
++
+.. [*StartNow*] フィールドで [*true*] を選択します。
+.. [* Compression] フィールドで [* Inline * ] を選択します。
+.. 「スケジュール * 」フィールドに「 sun -sat@1 」という式を入力します。この式は、毎週のすべての曜日の午前 1 時に重複排除と圧縮をスケジュールします
++
+image::../media/modify_workflow_modify_othrpar.gif[ワークフローの変更ヘルパー（ Modify workflow modify othrpar ）]
+
+
+
+. [OK] をクリックします。
+. [* プレビュー *] をクリックして、ワークフローの計画が正常に完了したことを確認し、 [OK] をクリックします。
+. [ 保存（ Save ） ] をクリックします。
+

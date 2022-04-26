@@ -1,0 +1,36 @@
+---
+permalink: rhel-install/concept-unsupported-features-for-wfa-on-linux.html 
+sidebar: sidebar 
+keywords: oncommand workflow automation, known, limitations 
+summary: OnCommand Workflow Automation （ WFA ） 5.0 には、 WFA をインストールして設定する前に注意しておく必要がある制限事項とサポートされない機能がいくつか含まれています。 
+---
+= OnCommand Workflow Automation の既知の制限事項
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation （ WFA ） 5.0 には、 WFA をインストールして設定する前に注意しておく必要がある制限事項とサポートされない機能がいくつか含まれています。
+
+* LDAP 認証 *
+
+* LDAP 認証に使用できるのは、 Microsoft Active Directory の Lightweight Directory Access Protocol （ LDAP ）サーバのみです。
+* 認証または通知に、複数のドメインの階層構造に含まれる LDAP ユーザ名は使用しないでください。
+
+
+[NOTE]
+====
+Microsoft Active Directory ライトウェイトディレクトリサービス (AD LDS) はサポートされていません。
+
+====
+* WFA のデータソースの種類 *
+
+Active IQ Data Center Manager 6.0 、 6.1 、 6.2 のデータソースタイプは WFA 4.1 リリースで廃止されました。これらのデータソースタイプは今後のリリースでサポートされなくなります。
+
+* WFA は Linux * にインストールされています
+
+* Data ONTAP 7-Mode の認定コンテンツは現在提供されていません。
+* PowerShell コードのみを含むコマンドは、 Linux と互換性がありません。
+* 7-Mode と VMware 向けの認定されたコマンドは、現時点では Perl には移植されていないため、 Linux との互換性がありません。
+

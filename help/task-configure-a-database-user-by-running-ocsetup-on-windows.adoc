@@ -1,0 +1,49 @@
+---
+permalink: help/task-configure-a-database-user-by-running-ocsetup-on-windows.html 
+sidebar: sidebar 
+keywords: configure, database, user, running, ocsetup, windows 
+summary: OnCommand Unified Manager サーバで ocsetup ファイルを実行して、 OnCommand Unified Manager データベースの OnCommand Workflow Automation への読み取り専用アクセスを設定できます。 
+---
+= Windows で ocsetup を実行して、データベースユーザを設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Unified Manager サーバで「 ocsetup 」ファイルを実行して、 OnCommand Unified Manager データベースの OnCommand Workflow Automation への読み取り専用アクセスを設定できます。
+
+.手順
+. 「 wfa_ocsetup.exe 」ファイルを OnCommand Unified Manager サーバのディレクトリに次の場所からダウンロードします。
++
+_https ： // wfa_Server_IP /download/wfa_ocsetup.exe
+
++
+「 wfa_Server_IP 」は、 WFA サーバの IP アドレス（ IPv4 または IPv6 アドレス）です。
+
++
+WFA にデフォルト以外のポートを指定した場合は、次のようにポート番号を含める必要があります。
+
++
+_https ： // wfa_server_ip ： port /download/wfa_ocsetup.exe
+
++
+「 port 」は、インストール時に WFA サーバに使用した TCP ポート番号です。
+
++
+IPv6 アドレスを指定する場合は、角かっこで囲む必要があります。
+
+. 'wfa_ocsetup.exe' ファイルをダブルクリックします
+. セットアップ・ウィザードの情報を読み、 * 次へ * をクリックします。
+. JRE の場所を参照または入力して、 [ 次へ ] をクリックします。
+. ユーザ名とパスワードを入力して、デフォルトクレデンシャルを上書きします。
++
+新しいデータベースユーザアカウントが作成され、 OnCommand Unified Manager データベースにアクセスできるようになります。
+
++
+
+NOTE: ユーザアカウントを作成しない場合は、デフォルトクレデンシャルが使用されます。セキュリティ上の理由からユーザアカウントを作成する必要があります。
+
+. 「 * 次へ * 」をクリックして結果を確認します。
+. [ 次へ * ] をクリックし、 [ * 完了 * ] をクリックしてウィザードを完了します。
+

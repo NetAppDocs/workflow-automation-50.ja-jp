@@ -1,0 +1,134 @@
+---
+permalink: windows-install/task-configure-wfa-with-mscs-using-configuration-scripts.html 
+sidebar: sidebar 
+keywords: configure, workflow, automation, mscs 
+summary: MSCS （ Microsoft クラスタサーバ）に Workflow Automation （ WFA ）をインストールしたら、設定スクリプトを使用して MSCS でハイアベイラビリティを実現するように WFA を設定する必要があります。 
+---
+= MSCS で Workflow Automation を設定します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MSCS （ Microsoft クラスタサーバ）に Workflow Automation （ WFA ）をインストールしたら、設定スクリプトを使用して MSCS でハイアベイラビリティを実現するように WFA を設定する必要があります。
+
+WFA のバックアップを作成しておく必要があります。
+
+.手順
+. MSCS クラスタの最初のノードにログインし、次の手順を実行します。
++
+[cols="2*"]
+|===
+| 用途 | 手順 
+
+
+ a| 
+Windows Server 2012
+ a| 
+.. フェイルオーバークラスタマネージャで、 * サービスロール * を右クリックします。
+.. [ 空のサービスロールの作成 *] を選択し、ロールの名前を「 wfa 」に変更します。
+.. 新しく作成した「 wfa 」ロールに IP アドレスリソースを追加します。
++
+... フェイルオーバー・クラスタ・マネージャで、新しく作成した「 wfa 」ロールを右クリックします。
+... [ * リソース * > * その他のリソース * > * IP アドレス * ] を選択します。
+... クラスタの IP アドレスを設定
+
+
+
+
+
+
+ a| 
+Windows 2008 の場合
+ a| 
+.. フェイルオーバークラスタマネージャで、 [* サービスとアプリケーション * ] を右クリックします。
+.. [ その他の操作 *>*Create Empty Service or Application* ] をクリックし、サービスの名前を「 WFA 」に変更します。
+.. 新しく作成した「 wfa 」サービスに IP アドレスリソースを追加します。
++
+... フェイルオーバークラスタマネージャで、新しく作成した「 wfa 」サービスを右クリックします。
+... [ * リソースの追加 * > * その他のリソース * > * IP アドレスの追加 * ] を選択します。
+... クラスタの IP アドレスを設定
+
+
+
+
+|===
+. コマンドプロンプトで、「 ha_setup.pl 」スクリプトを実行して WFA データを共有の場所に移動し、フェイルオーバーのために MSCS で WFA を設定します。「 perl ha_setup.pl --first [-t type_of cluster_vcs] [-g cluster_group_name][-i ip_address_resource_name] [-n cluster_name] [-k shared_disk] [-f
++
+このスクリプトは、「 wfa_install_location \ wfa \bin\ha\ 」にあります
+
++
+* 例 *
+
++
+perl ha_setup.pl -- first-t MSCS -g WFA -i " クラスタ IP アドレス " -n wfa_cluster -k " クラスタディスク 2" -f E: \
+
+. MSCS リソースが作成されていることを確認します
+. フェイルオーバークラスタマネージャから WFA サービスを停止します。
++
+|===
+
+
+| 用途 | 手順 
+
+
+ a| 
+Windows Server 2012
+ a| 
+.. 「 * Service Roles * 」を選択し、新しく作成した「 WFA 」ロールを選択します。
+.. リソースペインで、 * na_wfa_db * を右クリックし、 * オフラインにする * を選択します。
+.. リソースペインで、 * na_wfa_SRV* を右クリックし、 * オフラインにする * を選択します。
+
+
+
+
+ a| 
+Windows 2008 の場合
+ a| 
+.. 「 * サービスとアプリケーション * 」を選択し、新しく作成した「 wfa 」サービスを選択します。
+.. その他のリソースペインで、 * na_wfa_db * を右クリックし、 * このリソースをオフラインにする * を選択します。
+.. その他のリソースペインで、 * na_wfa_SRV* を右クリックし、 * このリソースをオフラインにする * を選択します。
+
+
+|===
++
+WFA データベースサービスと WFA サーバサービスをオフラインにする必要があります。WFA のサービスを Windows サービスから停止しないでください。
+
+. WFA リソースをセカンダリノードに手動で移動します。
+. 共有ディスクに 2 つ目のノードからアクセスできることを確認します。
+. コマンドプロンプトで、クラスタのセカンダリノードで「 ha_setup.pl 」スクリプトを実行し、共有の場所からのデータを使用するように WFA を設定します。「 perl ha_setup.pl --join [-t type_of _cluster_MSCS] [-f shared_drive_path] 」
++
+「 ha_setup.pl 」スクリプトは、「 wfa_install_location 」「 wfa 」「 bin 」「 ha 」にあります
+
++
+* 例 *
+
++
+`perl ha_setup.pl -- join-t MSCS -f E:
+
+. フェイルオーバークラスタマネージャから、 WFA リソースをオンラインにします。
++
+[cols="2*"]
+|===
+| 用途 | 手順 
+
+
+ a| 
+Windows Server 2012
+ a| 
+.. 新しく作成した「 wfa 」ロールを右クリックし、「 Start Role 」を選択します。ロールのステータスは running である必要があります。また、個々のリソースは Online 状態である必要があります。
+
+
+
+
+ a| 
+Windows 2008 の場合
+ a| 
+.. 新しく作成した「 wfa 」サービスを右クリックし、「 * このサービスまたはアプリケーションをオンラインにする * 」を選択します。サービスのステータスは「 running 」でなければなりません。また、個々のリソースは「 Online 」状態でなければなりません。
+
+
+|===
+. MSCS クラスタの 2 つ目のノードに手動で切り替えます。
+. クラスタの 2 つ目のノードで WFA サービスが正常に開始されることを確認します。
+

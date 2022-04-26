@@ -1,0 +1,190 @@
+---
+permalink: windows-install/task-install-workflow-automation-on-windows.html 
+sidebar: sidebar 
+keywords: oncommand workflow automation, install, windows 
+summary: OnCommand Workflow Automation （ WFA ）をインストールすると、環境で実行されるストレージタスクを自動化するためのストレージワークフローを作成およびカスタマイズできます。 
+---
+= Windows に OnCommand Workflow Automation をインストールします
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation （ WFA ）をインストールすると、環境で実行されるストレージタスクを自動化するためのストレージワークフローを作成およびカスタマイズできます。
+
+.必要なもの
+* インストールの前提条件を確認しておく必要があります。
++
+xref:reference-prerequisites-for-installing-workflow-automation.adoc[Workflow Automation をインストールするための前提条件]
+
+* WFA を以前にインストールしたシステムからアンインストールしたあとに WFA をインストールする場合は、そのシステムに WFA サービスがないことを確認する必要があります。
+* ネットアップサポートサイトから WFA インストーラをダウンロードしておく必要があります。
+* Java の「自動アップグレード」機能を無効にする必要があります。
+
+
+.このタスクについて
+* WFA を仮想マシン（ VM ）にインストールする場合、 VM の名前にアンダースコア（ _ ）文字を含めることはできません。
+* ActiveState ActivePerl は、 WFA をインストールする前にインストールされます。
++
+このインストールは、 WFA サーバにインストールした ActivePerl の他のインスタンスには影響しません。
+
+* MySQL をアンインストールした場合は、 WFA 4.2 以降を再インストールする前に、 MySQL のデータディレクトリを削除しておく必要があります。
+* MySQL を独自にインストールする場合、 WFA は MySQL my.ini` ファイルの「 secure-file-privilege 」および「 sql-mode 」プロパティを空白に設定します。
+
+
+.手順
+. 管理者権限を持つアカウントで Windows にログインします。
+. エクスプローラを開き、インストールファイルが保存されているディレクトリに移動します。
+. WFA をインストールします。
++
+** 対話型インストール
++
+... WFA インストーラの実行ファイル（ .exe ファイル）を右クリックし、 admin ユーザとして実行します。
+... 「 * 次へ * 」をクリックします。
+... デフォルトの admin ユーザのクレデンシャルを入力し、 * 次へ * をクリックします。
++
+デフォルトの admin パスワードは次の条件を満たしている必要があります。
+
++
+**** 6 文字以上にする必要があります
+**** 大文字の 1 文字
+**** 小文字を 1 文字使用します
+**** 1 つの数字
+**** 1 つの特殊文字 * 注： * admin ユーザのクレデンシャルをメモしておく必要があります。
+
+
+... WFA 設定のポートを選択し、 * Next * をクリックします。
+... サイト名と会社名を入力し、 [ 次へ * ] をクリックします。
++
+サイト名には、たとえばピッツバーグの WFA インストール場所を含めることができます。
+
+... デフォルトのインストール場所を変更する場合は、 WFA をインストールする場所を選択し、 * Next * をクリックします。
+... WFA データベースのデフォルトの場所を変更しない場合は、 * Next * をクリックします。
+... インストールを続行するには、 * Install * をクリックします。
+... [ 完了 ] をクリックしてインストールを完了します。
+... 次のいずれかを実行して、 WFA が正常にインストールされたことを確認します。
++
+**** Web ブラウザを使用して WFA にアクセスします。
+**** Windows サービスコンソールを使用して、 NetApp WFA Server サービスと NetApp WFA Database サービスが実行されていることを確認します。
+
+
+
+
+** サイレントインストール（コマンドプロンプトから）： +`WFA-version_number-build_number.exe /s /v" wfa_admin_username=wfa_Admin_password=password wfa_admin_mysql_password=confirm admin password/wfa_mysql_pass=password confirm password wfa_install_site=site wfa_install_organization =site WFA_install_organization =organization q_port=wfa_install_port\q_port=WFA_install_directory=wfa_install_admin_admin_password=wfa_install_admin_admin_password=WFA_admin_password=WFA_install_admin_install_install_password=WFA_directory=WFA_install_directory=wfa_install_admin_admin_install_install
++
+* 例 *
+
++
+「 WFA-x64-v4.2.0.0.0-B2973881.exe /s /v 」 wfa_admin_username=admin wfa_admin_username=Company * 234 wfa_admin_confirm_password=Company * 234 wfa_mysql_pass=mysql * 234 wfa_install_site=nb wfa_install_organization = nb wfa_install_HTTP ポート =admin wfa_http_port_port=admin WFA\WFA\qr ディレクトリ \qr Program \qr\WFA\HTTPS\WFA\WFA\HTTPS\WFA\HTTPS\WFA\WFA\HTTPS\WFA\WFA\HTTPS\WFA\WFA\WFA\WFA\WFA\WFA\WFA\WFA\WFA\HTTPS\WFA\WFA\WFA\WFA\WFA\WFA\WFA\WFA\WFA\WFA\WFA\WFA\WFA\WFA
+
++
+
+NOTE: /qn オプションは、 WFA ではサポートされません。
+
++
+コマンドパラメータは次のとおりです。
+
++
+[cols="2*"]
+|===
+| パラメータ | 説明 
+
+
+ a| 
+_wfa_admin_username_
+ a| 
+管理ユーザ名
+
+オプションのパラメータ。値を指定しない場合は、デフォルト値の admin が使用されます。
+
+
+
+ a| 
+_wfa_Admin_password_
+ a| 
+管理ユーザのパスワード
+
+必須パラメータ。デフォルトの admin パスワードは次の条件を満たしている必要があります。
+
+*** 6 文字以上にする必要があります
+*** 大文字の 1 文字
+*** 小文字を 1 文字使用します
+*** 1 つの数字
+*** 1 つの特殊文字
+
+
+
+
+ a| 
+_wfa_Admin_confirm_password_
+ a| 
+管理ユーザのパスワード
+
+必須パラメータ
+
+
+
+ a| 
+_wfa_mysql_pass_
+ a| 
+MySQL ユーザのパスワード
+
+必須パラメータ
+
+
+
+ a| 
+_CONFIRM_wfa_mysql_pass_
+ a| 
+MySQL ユーザのパスワード
+
+必須パラメータ
+
+
+
+ a| 
+_wfa_install_site_
+ a| 
+WFA をインストールしている組織単位必須パラメータ
+
+
+
+ a| 
+_wfa_install_organization _
+ a| 
+WFA をインストールする組織または会社の名前
+
+必須パラメータ
+
+
+
+ a| 
+_wfa_http_port__
+ a| 
+HTTP ポートオプションパラメータ。値を指定しない場合は、デフォルト値の 80 が使用されます。
+
+
+
+ a| 
+_wfa_HTTPS_PORT_
+ a| 
+HTTPS ポートオプションパラメータ。値を指定しない場合は、デフォルト値 443 が使用されます。
+
+
+
+ a| 
+_ インストール _
+ a| 
+インストールディレクトリのパス
+
+オプションのパラメータ。値を指定しない場合は、デフォルトパス「 C ： \Program Files\NetApp\WFA\" 」が使用されます。
+
+|===
+
+
+
+
+* 関連情報 *
+
+http://mysupport.netapp.com["ネットアップサポート"]

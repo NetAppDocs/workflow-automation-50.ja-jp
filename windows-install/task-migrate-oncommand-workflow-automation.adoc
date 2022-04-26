@@ -1,0 +1,40 @@
+---
+permalink: windows-install/task-migrate-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: migrate, oncommand workflow automation, installation 
+summary: OnCommand Workflow Automation （ WFA ）インストールを移行することで、 WFA のインストール時にインストールされる一意の WFA データベースキーを維持できます。たとえば、 WFA のインストールを Windows 2008 サーバから Windows 2012 サーバに移行できます。 
+---
+= OnCommand Workflow Automation インストールを移行します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation （ WFA ）インストールを移行することで、 WFA のインストール時にインストールされる一意の WFA データベースキーを維持できます。たとえば、 WFA のインストールを Windows 2008 サーバから Windows 2012 サーバに移行できます。
+
+.このタスクについて
+* この手順 は、 WFA データベースキーが含まれている WFA インストールを別のサーバに移行する場合にのみ実行する必要があります。
+* WFA のデータベースリストアでは WFA キーは移行されません。
+* WFA のインストールを移行しても SSL 証明書は移行されません。
+* WFA のデフォルトのインストールパスは、この手順 で使用されます。
++
+インストール時にデフォルトの場所を変更した場合は、変更した WFA のインストールパスを使用する必要があります。
+
+
+
+.手順
+. 管理者として Web ブラウザを使用して WFA にアクセスします。
+. WFA データベースをバックアップします。
+. WFA サーバでコマンドプロンプトを開き、ディレクトリを「 c ： \Program Files\NetApp\Virtual WFA \bin 」の場所に変更します
+. コマンドプロンプトで次のように入力して、データベースキーを取得します。「 wfer.cmd-key 」
+. 表示されたデータベース・キーをメモします。
+. WFA をアンインストールします。
+. 必要なシステムに WFA をインストールします。
+. 新しい WFA サーバでコマンドプロンプトを開き、ディレクトリを「 c ： \Program Files\NetApp\Virtual WFA \bin 」の場所に変更します
+. コマンドプロンプトで次のように入力して、データベースキーをインストールします。「 wfer.cmd-key=yourdatabasekey 」
++
+yourdatabasekey_は 、以前に WFA をインストールしたときに記録したキーです。
+
+. 作成したバックアップから WFA データベースをリストアします。
+
