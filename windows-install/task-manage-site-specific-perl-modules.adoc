@@ -13,6 +13,7 @@ summary: ActiveState Perl Package Manager （ PPM ）を使用して、サイト
 [role="lead"]
 ActiveState Perl Package Manager （ PPM ）を使用して、サイト固有の Perl モジュールを管理できます。WFA のアップグレード時に Perl モジュールが削除されないようにするために、サイト固有の Perl モジュールを OnCommand Workflow Automation （ WFA ）インストールディレクトリの外部にインストールする必要があります。
 
+.このタスクについて
 PERL5LIB 環境変数を使用すると、 WFA サーバにインストールされている Perl インタープリタを設定して Perl モジュールを使用できます。
 
 この手順 では、ユーザ領域の c:\Perl に Try-Tiny Perl モジュールをインストールする例として使用します。このユーザ領域は、 WFA をアンインストールしても削除されず、 WFA を再インストールまたはアップグレードしたあとに再利用できます。

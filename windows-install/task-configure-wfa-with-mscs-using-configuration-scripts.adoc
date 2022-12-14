@@ -13,6 +13,7 @@ summary: MSCS （ Microsoft クラスタサーバ）に Workflow Automation （ 
 [role="lead"]
 MSCS （ Microsoft クラスタサーバ）に Workflow Automation （ WFA ）をインストールしたら、設定スクリプトを使用して MSCS でハイアベイラビリティを実現するように WFA を設定する必要があります。
 
+.必要なもの
 WFA のバックアップを作成しておく必要があります。
 
 .手順

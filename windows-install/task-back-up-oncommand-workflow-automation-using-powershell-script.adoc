@@ -13,8 +13,10 @@ summary: OnCommand Workflow Automation （ WFA ）データベースを頻繁に
 [role="lead"]
 OnCommand Workflow Automation （ WFA ）データベースを頻繁にバックアップする場合は、 WFA インストールパッケージに付属の PowerShell スクリプトを使用します。
 
+.必要なもの
 管理者ユーザクレデンシャル、アーキテクトクレデンシャル、またはバックアップユーザクレデンシャルが必要です。
 
+.このタスクについて
 詳細については、 REST のドキュメントを参照してください。
 
 . Windows PowerShell を admin ユーザとして開き、 WFA データベースをバックアップします。

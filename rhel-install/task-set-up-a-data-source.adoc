@@ -59,6 +59,7 @@ MySQL データベースサーバ
 
 
 
+.このタスクについて
 この手順 を使用して、 WFA に Data Center Manager サーバのデータソースを複数追加できます。ただし、 Data Center Manager サーバ 6.3 以降を WFA とペアリングし、 Data Center Manager サーバの保護機能を使用する場合は、この手順 を使用しないでください。
 
 WFA と Data Center Manager サーバ 6.x のペアリングの詳細については、 OnCommand Unified Manager オンラインヘルプを参照してください。

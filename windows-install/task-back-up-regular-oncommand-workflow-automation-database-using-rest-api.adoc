@@ -13,6 +13,7 @@ summary: REST API を使用して、 OnCommand Workflow Automation （ WFA ）�
 [role="lead"]
 REST API を使用して、 OnCommand Workflow Automation （ WFA ）データベースの定期的なバックアップを実行できます。通常のバックアップでは、 WFA データベースのみがバックアップされます。
 
+.必要なもの
 管理、設計、またはバックアップのクレデンシャルが必要です。
 
 .ステップ

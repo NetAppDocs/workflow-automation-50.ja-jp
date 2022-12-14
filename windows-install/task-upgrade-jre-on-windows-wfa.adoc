@@ -13,8 +13,10 @@ summary: Windows サーバで、新しいバージョンの Java Runtime Environ
 [role="lead"]
 Windows サーバで、新しいバージョンの Java Runtime Environment （ JRE ）を OnCommand Workflow Automation （ WFA ）にアップグレードできます。JRE を新しいバージョンにアップグレードすると、 Windows サーバのセキュリティの脆弱性に対する修正を入手できます。
 
+.必要なもの
 WFA サーバに対する Windows の admin 権限が必要です。
 
+.このタスクについて
 リリースファミリー内の JRE リリースを更新できます。たとえば、 Java 8 Update 144 （ 64 ビット）から Java 8 Update 151 （ 64 ビット）へのアップグレードは可能ですが、 Java 8 から Java 9 への直接更新はできません。
 
 .手順

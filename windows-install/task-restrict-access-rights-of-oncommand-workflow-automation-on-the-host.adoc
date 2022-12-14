@@ -13,6 +13,7 @@ summary: デフォルトでは、 OnCommand Workflow Automation （ WFA ）は�
 [role="lead"]
 デフォルトでは、 OnCommand Workflow Automation （ WFA ）はホストシステムの管理者としてワークフローを実行します。デフォルトの設定を変更することで、ホストシステムに対する WFA の権限を制限できます。
 
+.必要なもの
 WFA ホストシステムに admin としてログインしておく必要があります。
 
 .手順

@@ -13,8 +13,10 @@ summary: OnCommand Workflow Automation （ WFA ）では、 Microsoft Active Dir
 [role="lead"]
 OnCommand Workflow Automation （ WFA ）では、 Microsoft Active Directory （ AD ）の Lightweight Directory Access Protocol （ LDAP ）サーバを認証と許可に使用するように設定できます。
 
+.必要なもの
 環境内に Microsoft AD LDAP サーバを設定しておく必要があります。
 
+.このタスクについて
 WFA でサポートされるのは Microsoft AD LDAP 認証のみです。Microsoft AD ライトウェイトディレクトリサービス (AD LDS) や Microsoft グローバルカタログなど、他の LDAP 認証方法は使用できません。
 
 

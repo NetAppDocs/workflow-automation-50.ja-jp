@@ -23,6 +23,7 @@ Workflow Automation （ WFA ）を Microsoft Cluster Server （ MSCS ）にイ�
 * 両方のクラスタノードを同じドメインに追加する必要があります。
 
 
+.このタスクについて
 この作業は、 MSCS インターフェイスでクラスタマネージャを使用して実行する必要があります。
 
 .手順

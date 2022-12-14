@@ -13,6 +13,7 @@ summary: OnCommand Workflow Automation （ WFA ）を設定して、ワークフ
 [role="lead"]
 ワークフローの処理に関する E メール通知を送信するように OnCommand Workflow Automation （ WFA ）を設定できます。たとえば、ワークフローが開始された場合やワークフローが失敗した場合などです。
 
+.必要なもの
 環境でメールホストを設定しておく必要があります。
 
 .手順

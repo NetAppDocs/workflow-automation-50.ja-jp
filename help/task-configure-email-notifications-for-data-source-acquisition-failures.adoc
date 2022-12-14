@@ -13,6 +13,7 @@ summary: データソースの取得に失敗した場合に OnCommand Workflow 
 [role="lead"]
 データソースの取得に失敗した場合に OnCommand Workflow Automation （ WFA ）で生成される通知を制御できます。通知のしきい値と間隔を設定できます。
 
+.必要なもの
 OnCommand Workflow Automation （ WFA ）で E メール通知を設定しておく必要があります。
 
 .手順

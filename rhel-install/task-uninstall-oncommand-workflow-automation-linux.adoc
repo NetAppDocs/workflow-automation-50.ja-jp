@@ -13,6 +13,7 @@ summary: OnCommand Workflow Automation （ WFA ）は、 1 つのコマンドで
 [role="lead"]
 OnCommand Workflow Automation （ WFA ）は、 1 つのコマンドで Red Hat Enterprise Linux マシンからアンインストールできます。
 
+.必要なもの
 WFA をアンインストールする Red Hat Enterprise Linux マシンへの root ユーザアクセスが必要です。
 
 .手順

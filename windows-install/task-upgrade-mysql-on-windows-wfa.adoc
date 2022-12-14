@@ -13,11 +13,13 @@ summary: Windows サーバ上の OnCommand Workflow Automation （ WFA ）用の
 [role="lead"]
 Windows サーバ上の OnCommand Workflow Automation （ WFA ）用の新しいバージョンの MySQL をアップグレードできます。MySQL を新しいバージョンにアップグレードすることで、 Windows サーバのセキュリティの脆弱性に対する修正を入手できます。
 
+.必要なもの
 WFA サーバに対する Windows の admin 権限と MySQL の root ユーザのパスワードが必要です。
 
 
 NOTE: MySQL をアンインストールした場合は、 WFA 4.2 以降を再インストールする前に、 MySQL のデータディレクトリを削除しておく必要があります。
 
+.このタスクについて
 次の制限事項に注意してください。
 
 * MySQL 5.7 の任意のバージョン内でアップグレードできます。

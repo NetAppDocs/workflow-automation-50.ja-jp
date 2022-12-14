@@ -18,6 +18,7 @@ OnCommand Workflow Automation （ WFA ）で作成したスキームが不要に
 * WFA の管理者権限または Architect のクレデンシャルが必要です。
 
 
+.このタスクについて
 事前定義されたスキームは削除できません
 
 .手順

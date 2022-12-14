@@ -13,6 +13,7 @@ summary: システムにインストールする Perl パッケージは、 OnCo
 [role="lead"]
 システムにインストールする Perl パッケージは、 OnCommand Workflow Automation で使用します。別の Perl ディストリビューションを使用する場合は、任意の Perl ディストリビューションを WFA と連携するように設定できます。
 
+.必要なもの
 必要な Perl ディストリビューションを WFA サーバにインストールしておく必要があります。
 
 .手順

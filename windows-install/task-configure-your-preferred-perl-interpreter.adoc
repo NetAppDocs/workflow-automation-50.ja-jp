@@ -13,8 +13,10 @@ summary: デフォルトでは、 OnCommand Workflow Automation （ WFA ）と�
 [role="lead"]
 デフォルトでは、 OnCommand Workflow Automation （ WFA ）とともに ActivePerl がインストールされます。別の Perl ディストリビューションを使用する場合は、任意の Perl ディストリビューションを WFA と連携するように設定できます。
 
+.必要なもの
 必要な Perl ディストリビューションを WFA サーバにインストールしておく必要があります。
 
+.このタスクについて
 デフォルトの ActivePerl インストールをアンインストールしたり上書きしたりしないでください。希望する Perl ディストリビューションを別の場所にインストールする必要があります。
 
 .手順

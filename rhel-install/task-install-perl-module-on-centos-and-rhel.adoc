@@ -13,6 +13,7 @@ summary: 一部の Perl モジュールは、 Linux 用 Perl パッケージに�
 [role="lead"]
 一部の Perl モジュールは、 Linux 用 Perl パッケージにデフォルトでは含まれていません。
 
+.このタスクについて
 WFA のインストール時に、 WFA インストーラはシステム内のすべての Perl モジュールが使用可能であることを検証し、その要件が満たされた場合に処理を続行します。OnCommand Workflow Automation （ WFA ）をインストールする前に、 Perl モジュールをインストールする必要があります。
 
 

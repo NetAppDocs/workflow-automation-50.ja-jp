@@ -13,6 +13,7 @@ summary: OnCommand Workflow Automation がインストールされている Linu
 [role="lead"]
 OnCommand Workflow Automation がインストールされている Linux サーバで Java Runtime Environment （ JRE ）を新しいバージョンにアップグレードすることで、セキュリティの脆弱性に対する修正を入手できます。
 
+.必要なもの
 WFA がインストールされている Linux システムに対する root 権限が必要です。
 
 

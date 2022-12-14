@@ -13,8 +13,10 @@ summary: OnCommand Workflow Automation （ WFA ）を使用すると、ゲスト
 [role="lead"]
 OnCommand Workflow Automation （ WFA ）を使用すると、ゲスト、オペレータ、承認者、アーキテクト、 admin 、 backup のいずれかです。
 
+.必要なもの
 WFA をインストールし、 admin としてログインしておく必要があります。
 
+.このタスクについて
 WFA では、次のロールのユーザを作成できます。
 
 * * ゲスト *

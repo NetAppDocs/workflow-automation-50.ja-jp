@@ -13,6 +13,7 @@ summary: Workflow Automation （ WFA ）をクラスタノードからすべて�
 [role="lead"]
 Workflow Automation （ WFA ）をクラスタノードからすべて削除することで、クラスタからアンインストールできます。
 
+.このタスクについて
 このタスクでは、環境 Windows Server 2012 を実行します。
 
 .手順

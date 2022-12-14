@@ -21,6 +21,7 @@ xref:reference-prerequisites-for-installing-workflow-automation.adoc[インス�
 * ネットアップサポートサイトから WFA インストーラをダウンロードしておく必要があります。
 
 
+.このタスクについて
 WFA を仮想マシン（ VM ）にインストールする場合、 VM の名前にアンダースコア（ _ ）文字を含めることはできません。
 
 デフォルトのインストール場所は、シェルプロンプトで変更できます。
